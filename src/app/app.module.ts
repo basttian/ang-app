@@ -19,8 +19,8 @@ import {DemoMaterialModule} from './material-module';
 import { SidenavComponent } from './component/sidenav/sidenav.component';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
 
-import {NavigationService} from './services/navigation.service'
-
+import {NavigationService} from './services/navigation.service';
+import {SnackbarService} from './services/snackbar.service'
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import {NavigationService} from './services/navigation.service'
     AngularFireModule.initializeApp(environment.firebase),
     DemoMaterialModule
   ],
-  providers: [NavigationService],
+  providers: [NavigationService,SnackbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

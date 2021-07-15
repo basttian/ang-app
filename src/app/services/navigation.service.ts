@@ -33,5 +33,4 @@ home(): boolean{
 
 // https://nils-mehlhorn.de/posts/angular-navigate-back-previous-page
 
-  
 }

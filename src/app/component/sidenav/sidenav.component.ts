@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { MatDrawer, MatDrawerToggleResult} from '@angular/material/sidenav'; 
-import { AuthComponent } from '../../auth/auth.component';
+
 
 import { NavigationService } from '../../services/navigation.service'
 
