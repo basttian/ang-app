@@ -1,0 +1,21 @@
+<div *ngIf="auth.user | async as user; else showLogin">
+    <button mat-icon-button (click)="logout()"
+          #tooltip="matTooltip"
+          matTooltip="Salir"
+          matTooltipPosition="below"
+          matTooltipHideDelay="1000"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+</div>
+<ng-template #showLogin>
+  <button mat-icon-button (click)="login()"
+          #tooltip="matTooltip"
+          matTooltip="Sign In - Google Account"
+          matTooltipPosition="below"
+          matTooltipHideDelay="1000">
+        <mat-icon>login</mat-icon>
+  </button>
+</ng-template>
+
+

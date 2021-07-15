@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-project-984f4": {
+      "hosting": {
+        "projecang-one": [
+          "angular-project-984f4"
+        ]
+      }
+    }
+  }
+}

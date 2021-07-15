@@ -1,0 +1,29 @@
+.container-padding{
+  display: flex;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+}
+@media only screen and (max-width: 600px) {
+    .btn-flotante {
+        font-size: 14px;
+        padding: 12px 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
