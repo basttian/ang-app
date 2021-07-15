@@ -32,5 +32,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://github.com/angular/angularfire
 ```
 
-[MATERIAL UI] (https://material.angular.io/)
+[MATERIAL UI](https://material.angular.io/)
 
