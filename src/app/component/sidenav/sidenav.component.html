@@ -1,9 +1,6 @@
 <mat-drawer-container class="" autosize>
   <mat-drawer mode="side" #drawer class="sidenav-content" fixedInViewport>
-  	<mat-toolbar>
-  		<app-auth (userName)="userInLine($event)"></app-auth>
-  		{{userInLineAuth}}
-  	</mat-toolbar>
+  	<mat-toolbar>{{usuarios.userInLine$ | async}}</mat-toolbar>
 	<mat-nav-list>
 		<a mat-list-item [routerLink]="['/home']">Home</a>
 		<a mat-list-item [routerLink]="['/desktop']" *ngIf="auth.user | async as user">Mi escritorio</a>

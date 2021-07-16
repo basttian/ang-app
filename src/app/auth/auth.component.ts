@@ -17,8 +17,6 @@ import {SnackbarService} from '../services/snackbar.service'
 
 export class AuthComponent implements OnInit {
 
-  @Output() userName = new EventEmitter();
-
   constructor(public auth:AngularFireAuth, public routes:Router, public drawer: SidenavComponent, public snackbar:SnackbarService) { }
 
   public login(){
@@ -35,19 +33,6 @@ export class AuthComponent implements OnInit {
       .catch((error)=>{ console.log(error)});
     }
 
-  ngOnInit(): void {
-
-    this.auth.onAuthStateChanged((user) => {
-      if (user) {
-        console.log('User is signed In')
-        this.userName.emit(user.displayName);
-        this.routes.navigate(['desktop'])
-      } else {
-        this.userName.emit('');
-        console.log('User is signed Out')
-        this.routes.navigate(['home'])
-      }
-    })
-  }
-
+  ngOnInit(): void {}
+  
 }
