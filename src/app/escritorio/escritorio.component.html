@@ -1,5 +1,13 @@
 
 <h1>Desktop</h1>
 
-<p>Bienvenido a tu escritorio.</p>
+<p>Bienvenido  {{ usuario.userInLine$ | async}}.</p>
 
+<div *ngIf="user !== null">
+    <h1>{{user.displayName | uppercase}}</h1>
+    <img 
+    [src]="user.photoURL" 
+    width="150px" 
+    height="150px" alt="" 
+    style="border-radius:100px">
+</div>

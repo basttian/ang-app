@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../services/users.service'
+
 
 @Component({
   selector: 'app-escritorio',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EscritorioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public usuario: UsersService) { }
+
+  user = null
 
   ngOnInit(): void {
+
+    this.usuario.usuarioConectadoActivo().then(resp => {
+      this.user =  resp
+      return this.user
+    })
+
   }
 
 }
